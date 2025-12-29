@@ -10,16 +10,16 @@ module.exports = {
 
   devServer: {
     port: 3000,
-  historyApiFallback: {
-    index: '/index.html'
-  },
+    historyApiFallback: {
+      index: "/index.html",
+    },
   },
 
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
-    publicPath: "auto"
+    publicPath: "auto",
   },
 
   module: {
@@ -27,33 +27,40 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: "babel-loader"
-      }
-    ]
+        use: "babel-loader",
+      },
+    ],
   },
 
   resolve: {
-    extensions: [".js", ".jsx"]
+    extensions: [".js", ".jsx"],
   },
 
   plugins: [
-   new ModuleFederationPlugin({
-  name: "shelle",
-  remotes: {
-    patients: "patients@http://localhost:3002/remoteEntry.js",
-  },
-shared: {
-  react: { singleton: true, requiredVersion: false, eager: true },
-  "react-dom": { singleton: true, requiredVersion: false, eager: true },
-  "react-router-dom": { singleton: true, requiredVersion: false, eager: true },
-  "react-router": { singleton: true, requiredVersion: false, eager: true },
-}
-
-})
-,
-
+    new ModuleFederationPlugin({
+      name: "shelle",
+      remotes: {
+        patients: "patients@http://localhost:3002/remoteEntry.js",
+        authe: "authe@http://localhost:3003/remoteEntry.js",
+    
+      },
+      shared: {
+        react: { singleton: true, requiredVersion: false, eager: true },
+        "react-dom": { singleton: true, requiredVersion: false, eager: true },
+        "react-router-dom": {
+          singleton: true,
+          requiredVersion: false,
+          eager: true,
+        },
+        "react-router": {
+          singleton: true,
+          requiredVersion: false,
+          eager: true,
+        },
+      },
+    }),
     new HtmlWebpackPlugin({
-      template: "./public/index.html"
-    })
-  ]
+      template: "./public/index.html",
+    }),
+  ],
 };

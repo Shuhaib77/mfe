@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin =
   require("webpack").container.ModuleFederationPlugin;
+const path = require("path");
 
 module.exports = {
   entry: "./src/index.js",
@@ -36,18 +37,14 @@ module.exports = {
       exposes: {
         "./App": "./src/App",
       },
+ shared: {
+  react: { singleton: true, requiredVersion: false, eager: true },
+  "react-dom": { singleton: true, requiredVersion: false, eager: true },
+  "react-router-dom": { singleton: true, requiredVersion: false, eager: true },
+  "react-router": { singleton: true, requiredVersion: false, eager: true },
+}
 
-      shared: {
-        react: { singleton: true, eager: true, requiredVersion: false },
-        "react-dom": { singleton: true, eager: true, requiredVersion: false },
-        "react-router-dom": {
-          singleton: true,
-          eager: true,
-          requiredVersion: false,
-        },
-      },
     }),
-
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
