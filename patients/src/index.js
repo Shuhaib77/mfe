@@ -3,6 +3,8 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 
+
+
 const mount = (el, { standalone = false } = {}) => {
   const root = createRoot(el);
   if (standalone) {
@@ -17,7 +19,7 @@ const mount = (el, { standalone = false } = {}) => {
 };
 
 if (process.env.NODE_ENV === "development") {
-  const el = document.getElementById("patients-root");
+  const el = document.getElementById("root");
   if (el) mount(el, { standalone: true });
 }
 

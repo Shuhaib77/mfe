@@ -1,0 +1,15 @@
+{
+  "name": "mfe-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "authe",
+    "patients",
+    "shell"
+  ],
+  "scripts": {
+    "sync-styles": "node scripts/sync-styles.js",
+    "prestart": "npm run sync-styles"
+  }
+}

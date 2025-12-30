@@ -1,11 +1,11 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Login from "./Login";
-
+import "./styles.css";
 export default function App() {
   return (
     <>
-      <h2>Patients MFE</h2>
+      <h2  className="text-2xl bg-red-700 text-blue-200">Patients MFE</h2>
 
       <nav>
         <Link to="">List</Link> |

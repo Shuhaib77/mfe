@@ -1,0 +1,41 @@
+
+@import "tailwindcss";
+
+@theme {
+  /* Primera Color Palette */
+  --color-primera-50: #f59e0b;
+  --color-primera-100: #e0f2fe;
+  --color-primera-200: #bae6fd;
+  --color-primera-300: #7dd3fc;
+  --color-primera-400: #38bdf8;
+  --color-primera-500: #0ea5e9;
+  --color-primera-600: #0284c7;
+  --color-primera-700: #0369a1;
+  --color-primera-800: #075985;
+  --color-primera-900: #0c4a6e;
+  --color-primera-950: #082f49;
+  
+  /* Secondary colors */
+  --color-secondary-500: #8b5cf6;
+  --color-accent-500: #f59e0b;
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Custom utility classes */
+.bg-primera {
+  background-color: var(--color-primera-500);
+}
+
+.text-primera {
+  color: var(--color-primera-500);
+}

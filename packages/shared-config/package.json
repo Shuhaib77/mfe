@@ -1,0 +1,26 @@
+{
+  "name": "@myorg/shared-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "postcss.config.js",
+    "babel.config.js",
+    "webpack.common.js",
+    "styles"
+  ],
+  "dependencies": {
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "postcss": "^8.4.0",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "@babel/preset-react": "^7.23.0",
+    "@babel/preset-typescript": "^7.23.0",
+    "babel-loader": "^9.1.0",
+    "css-loader": "^6.8.0",
+    "style-loader": "^3.3.0",
+    "postcss-loader": "^7.3.0"
+  }
+}
+
+
