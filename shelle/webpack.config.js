@@ -165,7 +165,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "shell",
       remotes: {
-        authe: "authe@mfe-4xig.vercel.app/remoteEntry.js",
+        authe: "authe@https://mfe-4xig.vercel.app/remoteEntry.js",
         patients: "patients@http://localhost:3002/remoteEntry.js",
       },
       shared: {
