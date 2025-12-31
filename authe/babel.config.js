@@ -6,4 +6,4 @@ module.exports = {
   ],
 };
 
-module.exports = require('@myorg/shared-config/babel.config');
+// module.exports = require('@myorg/shared-config/babel.config');
