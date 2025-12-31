@@ -67,7 +67,7 @@ module.exports = {
     },
   },
   output: {
-    publicPath: "http://localhost:3002/",
+    publicPath: "https://mfe-i53j.vercel.app",
   },
   module: {
     rules: [
