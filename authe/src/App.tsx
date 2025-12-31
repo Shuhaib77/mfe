@@ -1,4 +1,5 @@
 import "./styles.css";
+
 function App() {
   return (
     <div className="min-h-screen bg-primera-50">
