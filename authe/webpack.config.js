@@ -80,7 +80,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),  // <-- IMPORTANT
-    publicPath: "auto",
+    publicPath: "https://mfe-4xig.vercel.app",
     clean: true
   },
 
